@@ -1,0 +1,65 @@
+/* -----------------start top sec -------------*/
+.topsec{
+    
+    background-size: cover;
+    background-attachment: fixed;
+    min-height:  900px;
+    position: relative;
+    background-image: url("../images/home-bg.jpg");
+    .container{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        background-color: rgba(3, 3, 3, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 40px;
+        padding-left: 40px;
+        .topsec-info{
+            .topsec-prese{
+                background: rosybrown;
+                border-radius: 10px 100px / 120px;;
+                width: 20%;
+                height: 20%;
+                font-size: 20px;
+                text-align: center; 
+            }
+            h1{
+                font-size: 70px;
+            }
+            ul li{
+                list-style-type: none;  
+            }
+            ul li a{
+                color: $white-color;
+                text-decoration: none;
+            }
+            .info li a{
+                 margin-left: 15px;
+            }
+            .social-icon{
+                display: flex;
+                justify-content: space-around;    
+                width: 200px;
+            }
+        }
+        .profil{
+            border-radius: 50%;
+            width: 20%;
+            height: 40%;
+            background: rgb(0, 0, 0);
+            box-shadow: 0px 0px 10px #000;
+            
+            img{
+                border-radius: 50%;
+                width: 97%;
+                height: 90%;
+                text-align: center;
+                margin: 16px 6px;
+            }
+        }
+    }
+}
+

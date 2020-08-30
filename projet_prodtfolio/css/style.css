@@ -1,0 +1,289 @@
+/*----------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic);
+/*--------------------  -------------------------------- */
+/*----------------------------------------------------*/
+body {
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  background-color: #fff; }
+
+/* Nav / Navbar Styles
+===================================*/
+.navbar {
+  background: #000;
+  border-bottom: none;
+  padding: 30px 0 10px;
+  transition-duration: 0.6s; }
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: #fff; }
+
+.navbar-default .navbar-nav > li {
+  margin-right: 8px; }
+
+.navbar-default .navbar-nav > li:last-of-type {
+  margin-right: 0; }
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:active,
+.navbar-default .navbar-nav > .active > a:focus {
+  border-bottom: 4px solid rosybrown;
+  color: rosybrown; }
+
+.navbar-toggle,
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background: #fff; }
+
+/*--------------------  -------------------------------- */
+/*----------------------------------------------------*/
+/* -----------------start top sec -------------*/
+.topsec {
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 900px;
+  position: relative;
+  background-image: url("../images/home-bg.jpg"); }
+  .topsec .container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(3, 3, 3, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 40px;
+    padding-left: 40px; }
+    .topsec .container .topsec-info .topsec-prese {
+      background: rosybrown;
+      border-radius: 10px 100px / 120px;
+      width: 20%;
+      height: 20%;
+      font-size: 20px;
+      text-align: center; }
+    .topsec .container .topsec-info h1 {
+      font-size: 70px; }
+    .topsec .container .topsec-info ul li {
+      list-style-type: none; }
+    .topsec .container .topsec-info ul li a {
+      color: #fff;
+      text-decoration: none; }
+    .topsec .container .topsec-info .info li a {
+      margin-left: 15px; }
+    .topsec .container .topsec-info .social-icon {
+      display: flex;
+      justify-content: space-around;
+      width: 200px; }
+    .topsec .container .profil {
+      border-radius: 50%;
+      width: 20%;
+      height: 40%;
+      background: black;
+      box-shadow: 0px 0px 10px #000; }
+      .topsec .container .profil img {
+        border-radius: 50%;
+        width: 97%;
+        height: 90%;
+        text-align: center;
+        margin: 16px 6px; }
+
+/*--------------------  -------------------------------- */
+/*----------------------------------------------------*/
+.aboutSec {
+  background: #000; }
+  .aboutSec .section-separator {
+    margin-top: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .aboutSec .section-separator .aboutsec-info {
+      margin-left: 100px; }
+      .aboutSec .section-separator .aboutsec-info h1 {
+        font-size: 40px; }
+      .aboutSec .section-separator .aboutsec-info p {
+        font-size: 20px;
+        width: 550px;
+        margin-bottom: 30px; }
+      .aboutSec .section-separator .aboutsec-info .about-tag {
+        display: flex;
+        justify-content: space-between;
+        width: 550px; }
+        .aboutSec .section-separator .aboutsec-info .about-tag li {
+          list-style-type: none;
+          margin-left: -35px; }
+          .aboutSec .section-separator .aboutsec-info .about-tag li span {
+            border: 2px solid rosybrown;
+            border-radius: 10%;
+            text-align: center;
+            padding: 5px;
+            font-size: 16px; }
+      .aboutSec .section-separator .aboutsec-info .downlaod {
+        margin-top: 35px; }
+        .aboutSec .section-separator .aboutsec-info .downlaod .btn {
+          color: #fff;
+          border: 2px solid rosybrown;
+          text-align: center;
+          background: rosybrown; }
+        .aboutSec .section-separator .aboutsec-info .downlaod a:hover {
+          background: transparent; }
+
+/*--------------------  -------------------------------- */
+/*----------------------------------------------------*/
+.skillsSec {
+  background: #000; }
+  .skillsSec h3 {
+    margin-top: 150px;
+    font-size: 40px; }
+  .skillsSec .skills-bar-container {
+    margin-top: 50px;
+    margin-left: -30px;
+    width: 100%;
+    min-width: 300px;
+    list-style: none; }
+    .skillsSec .skills-bar-container li {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px; }
+      .skillsSec .skills-bar-container li .progressbar-title {
+        color: #fff;
+        display: flex; }
+        .skillsSec .skills-bar-container li .progressbar-title h3 {
+          display: inline-block; }
+        .skillsSec .skills-bar-container li .progressbar-title .percent {
+          position: absolute;
+          right: 5px; }
+      .skillsSec .skills-bar-container li .bar-container {
+        background: #555;
+        position: relative;
+        width: 100%;
+        height: 8px;
+        margin-top: 5px;
+        display: block;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px; }
+        .skillsSec .skills-bar-container li .bar-container .progressbar {
+          position: absolute;
+          width: 0%;
+          height: 100%;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          border-radius: 5px;
+          -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+          -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+        .skillsSec .skills-bar-container li .bar-container #progress-html {
+          -webkit-animation-name: progress-html;
+          animation-name: progress-html;
+          -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s; }
+        .skillsSec .skills-bar-container li .bar-container #progress-css {
+          -webkit-animation-name: progress-css;
+          animation-name: progress-css;
+          -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s; }
+        .skillsSec .skills-bar-container li .bar-container #progress-javascript {
+          -webkit-animation-name: progress-javascript;
+          animation-name: progress-javascript;
+          -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s; }
+        .skillsSec .skills-bar-container li .bar-container #progress-php {
+          -webkit-animation-name: progress-php;
+          animation-name: progress-php;
+          -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s; }
+        .skillsSec .skills-bar-container li .bar-container #progress-mysql {
+          -webkit-animation-name: progress-mysql;
+          animation-name: progress-mysql;
+          -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s; }
+        .skillsSec .skills-bar-container li .bar-container #progress-wordpress {
+          -webkit-animation-name: progress-wordpress;
+          animation-name: progress-wordpress;
+          -webkit-animation-delay: 4.2s;
+          animation-delay: 4.2s; }
+        .skillsSec .skills-bar-container li .bar-container #progress-adobe {
+          -webkit-animation-name: progress-adobe;
+          animation-name: progress-adobe;
+          -webkit-animation-delay: 4.9s;
+          animation-delay: 4.9s; }
+  .skillsSec .progress {
+    background-color: rosybrown; }
+
+@keyframes progress-html {
+  0% {
+    width: 0%; }
+  100% {
+    width: 90%; } }
+
+@keyframes progress-css {
+  0% {
+    width: 0%; }
+  100% {
+    width: 90%; } }
+
+@keyframes progress-javascript {
+  0% {
+    width: 0%; }
+  100% {
+    width: 70%; } }
+
+@keyframes progress-php {
+  0% {
+    width: 0%; }
+  100% {
+    width: 80%; } }
+
+@keyframes progress-mysql {
+  0% {
+    width: 0%; }
+  100% {
+    width: 65%; } }
+
+@keyframes progress-wordpress {
+  0% {
+    width: 0%; }
+  100% {
+    width: 80%; } }
+
+@keyframes progress-adobe {
+  0% {
+    width: 0%; }
+  100% {
+    width: 75%; } }
+  .skillsSec .professional-skills h3 {
+    margin-left: 90px; }
+  .skillsSec .profess {
+    margin-top: 50px;
+    margin-left: 90px;
+    text-align: center;
+    display: flex;
+    width: 90%;
+    justify-content: space-between; }
+    .skillsSec .profess .chart {
+      position: relative;
+      display: block;
+      margin: 20px 10px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center; }
+      .skillsSec .profess .chart canvas {
+        position: absolute;
+        top: 0;
+        left: 0; }
+
+/*--------------------  -------------------------------- */

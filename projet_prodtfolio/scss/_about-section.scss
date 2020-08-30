@@ -1,0 +1,51 @@
+
+.aboutSec{
+    background: $black-color;
+    .section-separator{
+        margin-top: 150px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       .aboutsec-info{
+           margin-left: 100px;
+           h1{
+               font-size: 40px;
+           }
+           p{
+               font-size: 20px;
+               width: 550px;
+               margin-bottom: 30px;
+           }
+           .about-tag{
+                display: flex;
+                justify-content: space-between;    
+                width: 550px;
+                li{
+                   list-style-type: none;
+                   margin-left: -35px;
+                    span{
+                        border: 2px solid $border-color;
+                        border-radius: 10%;
+                        text-align: center;
+                        padding: 5px;
+                        font-size: 16px;
+                    }
+                }
+            }
+            .downlaod{
+                margin-top: 35px;
+                .btn{
+                    color: $white-color;
+                    border: 2px solid $border-color;
+                    text-align: center;
+                    background: $border-color;
+                } 
+                a:hover{
+                    background: transparent;
+                }
+            }
+           
+       }
+    }
+}
