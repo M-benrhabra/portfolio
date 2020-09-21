@@ -7,21 +7,28 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   line-height: 1.8;
-  background-color: #fff; }
+  overflow-x: hidden; }
+
+html {
+  scroll-behavior: smooth; }
+
+.header {
+  width: 100vw; }
 
 /* Nav / Navbar Styles
 ===================================*/
 .navbar {
-  background: #000;
+  background: transparent;
   border-bottom: none;
   padding: 30px 0 10px;
-  transition-duration: 0.6s; }
+  transition-duration: 0.6s;
+  width: 100vw; }
 
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
   color: #fff; }
 
-.navbar-default .navbar-nav > li {
+.navbar-nav > li {
   margin-right: 8px; }
 
 .navbar-default .navbar-nav > li:last-of-type {
@@ -30,15 +37,34 @@ body {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:active,
-.navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
   border-bottom: 4px solid rosybrown;
-  color: rosybrown; }
+  color: rosybrown;
+  background: #000; }
+
+.nav-dropdown-scroll {
+  box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.4); }
 
 .navbar-toggle,
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
-  background: #fff; }
+  background: #000; }
+
+.navbar-scroll {
+  background: #000;
+  padding: 0;
+  transition-duration: 0.6s; }
+
+.modal form div input {
+  background: transparent;
+  border: 2px solid rosybrown;
+  color: #fff; }
+
+.modal form div input::placeholder {
+  color: #fff; }
 
 /*--------------------  -------------------------------- */
 /*----------------------------------------------------*/
@@ -48,7 +74,7 @@ body {
   background-attachment: fixed;
   min-height: 900px;
   position: relative;
-  background-image: url("../images/home-bg.jpg"); }
+  background-image: url("../images/programation.png"); }
   .topsec .container {
     position: absolute;
     width: 100%;
@@ -84,7 +110,7 @@ body {
       border-radius: 50%;
       width: 20%;
       height: 40%;
-      background: black;
+      background: #000;
       box-shadow: 0px 0px 10px #000; }
       .topsec .container .profil img {
         border-radius: 50%;
@@ -92,6 +118,30 @@ body {
         height: 90%;
         text-align: center;
         margin: 16px 6px; }
+
+/* media queries */
+@media (max-width: 968px) {
+  .topsec .container {
+    display: block;
+    text-align: center; }
+    .topsec .container .topsec-info .topsec-prese {
+      margin-top: 130px;
+      width: 30%;
+      height: 15%; }
+    .topsec .container .profil {
+      margin-top: 50px;
+      margin-left: 130px;
+      border-radius: 50%;
+      width: 45%;
+      height: 24%;
+      background: #000;
+      box-shadow: 0px 0px 10px #000; }
+      .topsec .container .profil img {
+        border-radius: 50%;
+        width: 102%;
+        height: 90%;
+        text-align: center;
+        margin: 10px 18px 10px 0px; } }
 
 /*--------------------  -------------------------------- */
 /*----------------------------------------------------*/
@@ -134,156 +184,329 @@ body {
         .aboutSec .section-separator .aboutsec-info .downlaod a:hover {
           background: transparent; }
 
+/* media queries */
+@media (max-width: 968px) {
+  .aboutSec .section-separator {
+    display: block; }
+    .aboutSec .section-separator .aboutsec-info {
+      margin-top: 50px;
+      margin-left: 10px; }
+      .aboutSec .section-separator .aboutsec-info p {
+        width: 480px; }
+      .aboutSec .section-separator .aboutsec-info .about-tag {
+        width: 450px; } }
+
 /*--------------------  -------------------------------- */
 /*----------------------------------------------------*/
 .skillsSec {
   background: #000; }
-  .skillsSec h3 {
-    margin-top: 150px;
-    font-size: 40px; }
-  .skillsSec .skills-bar-container {
-    margin-top: 50px;
-    margin-left: -30px;
+  .skillsSec h1 {
+    margin-top: 200px;
+    margin-bottom: 70px; }
+  .skillsSec .skills .skill {
+    margin-bottom: 30px; }
+  .skillsSec .skills .skill .skill-title {
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 14px; }
+  .skillsSec .skills .skill .skill-bar {
+    width: 0;
+    height: 6px;
+    background: #413f3f;
+    transition: 1s cubic-bezier(1, 0, 0.5, 1);
+    -webkit-transition: 1s cubic-bezier(1, 0, 0.5, 1);
+    -ms-transition: 1s cubic-bezier(1, 0, 0.5, 1); }
+  .skillsSec .skills.active .skill .skill-bar {
+    width: 40%; }
+  .skillsSec .skills .skill .skill-bar span {
+    float: left;
+    width: 0%;
+    background: rosybrown;
+    height: 6px;
+    position: relative;
+    transition: 1s cubic-bezier(1, 0, 0.5, 1);
+    -webkit-transition: 1s cubic-bezier(1, 0, 0.5, 1);
+    -ms-transition: 1s cubic-bezier(1, 0, 0.5, 1); }
+  .skillsSec .skills .skill .skill-bar span b {
+    float: left;
     width: 100%;
-    min-width: 300px;
-    list-style: none; }
-    .skillsSec .skills-bar-container li {
-      width: 100%;
-      padding: 5px;
-      margin-bottom: 10px; }
-      .skillsSec .skills-bar-container li .progressbar-title {
-        color: #fff;
-        display: flex; }
-        .skillsSec .skills-bar-container li .progressbar-title h3 {
-          display: inline-block; }
-        .skillsSec .skills-bar-container li .progressbar-title .percent {
-          position: absolute;
-          right: 5px; }
-      .skillsSec .skills-bar-container li .bar-container {
-        background: #555;
-        position: relative;
-        width: 100%;
-        height: 8px;
-        margin-top: 5px;
-        display: block;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        border-radius: 5px; }
-        .skillsSec .skills-bar-container li .bar-container .progressbar {
-          position: absolute;
-          width: 0%;
-          height: 100%;
-          -webkit-border-radius: 5px;
-          -moz-border-radius: 5px;
-          -ms-border-radius: 5px;
-          border-radius: 5px;
-          -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-          -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-          -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
-        .skillsSec .skills-bar-container li .bar-container #progress-html {
-          -webkit-animation-name: progress-html;
-          animation-name: progress-html;
-          -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s; }
-        .skillsSec .skills-bar-container li .bar-container #progress-css {
-          -webkit-animation-name: progress-css;
-          animation-name: progress-css;
-          -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s; }
-        .skillsSec .skills-bar-container li .bar-container #progress-javascript {
-          -webkit-animation-name: progress-javascript;
-          animation-name: progress-javascript;
-          -webkit-animation-delay: 2.1s;
-          animation-delay: 2.1s; }
-        .skillsSec .skills-bar-container li .bar-container #progress-php {
-          -webkit-animation-name: progress-php;
-          animation-name: progress-php;
-          -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s; }
-        .skillsSec .skills-bar-container li .bar-container #progress-mysql {
-          -webkit-animation-name: progress-mysql;
-          animation-name: progress-mysql;
-          -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s; }
-        .skillsSec .skills-bar-container li .bar-container #progress-wordpress {
-          -webkit-animation-name: progress-wordpress;
-          animation-name: progress-wordpress;
-          -webkit-animation-delay: 4.2s;
-          animation-delay: 4.2s; }
-        .skillsSec .skills-bar-container li .bar-container #progress-adobe {
-          -webkit-animation-name: progress-adobe;
-          animation-name: progress-adobe;
-          -webkit-animation-delay: 4.9s;
-          animation-delay: 4.9s; }
-  .skillsSec .progress {
-    background-color: rosybrown; }
-
-@keyframes progress-html {
-  0% {
-    width: 0%; }
-  100% {
-    width: 90%; } }
-
-@keyframes progress-css {
-  0% {
-    width: 0%; }
-  100% {
-    width: 90%; } }
-
-@keyframes progress-javascript {
-  0% {
-    width: 0%; }
-  100% {
-    width: 70%; } }
-
-@keyframes progress-php {
-  0% {
-    width: 0%; }
-  100% {
-    width: 80%; } }
-
-@keyframes progress-mysql {
-  0% {
-    width: 0%; }
-  100% {
-    width: 65%; } }
-
-@keyframes progress-wordpress {
-  0% {
-    width: 0%; }
-  100% {
-    width: 80%; } }
-
-@keyframes progress-adobe {
-  0% {
-    width: 0%; }
-  100% {
-    width: 75%; } }
-  .skillsSec .professional-skills h3 {
-    margin-left: 90px; }
-  .skillsSec .profess {
-    margin-top: 50px;
-    margin-left: 90px;
-    text-align: center;
-    display: flex;
-    width: 90%;
-    justify-content: space-between; }
-    .skillsSec .profess .chart {
-      position: relative;
-      display: block;
-      margin: 20px 10px;
+    position: relative;
+    text-align: right;
+    opacity: 0;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    top: -30px; }
+  .skillsSec .professional-skills .skil {
+    margin-bottom: 10px; }
+  .skillsSec .professional-skills .round {
+    min-height: 100px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    position: relative;
+    margin-bottom: 20px; }
+    .skillsSec .professional-skills .round strong {
+      position: absolute;
+      top: 50%;
+      left: 28%;
+      margin-top: -50px;
+      transform: translate(-50%);
+      font-size: 20px;
       color: #fff;
-      font-size: 16px;
-      font-weight: 400;
-      text-transform: uppercase;
-      text-align: center; }
-      .skillsSec .profess .chart canvas {
-        position: absolute;
-        top: 0;
-        left: 0; }
+      font-weight: 100; }
+    .skillsSec .professional-skills .round span {
+      display: block;
+      color: #ebe2e2;
+      font-size: 20px;
+      margin-top: 10px; }
+
+/* media queries */
+@media (max-width: 968px) {
+  .skillsSec .skills-bar-container {
+    margin-left: -15px; }
+  .skillsSec .skills.active .skill .skill-bar {
+    width: 90%; }
+  .skillsSec .professional-skills h3 {
+    margin-left: 5px; }
+  .skillsSec .professional-skills .display {
+    display: flex; }
+  .skillsSec .professional-skills .round {
+    margin-left: 30px; }
+    .skillsSec .professional-skills .round strong {
+      left: 50%; } }
+
+/*--------------------  -------------------------------- */
+/*----------------------------------------------------*/
+.experinceSec {
+  background: #000; }
+  .experinceSec .education {
+    margin-top: 200px; }
+    .experinceSec .education h1 {
+      font-size: 40px;
+      margin-bottom: 60px; }
+    .experinceSec .education .education-deatils .education-item {
+      height: 200px;
+      border-radius: 10px;
+      background: #413f3f;
+      margin-bottom: 35px;
+      margin-top: 25px;
+      padding: 10px 30px;
+      text-align: center;
+      box-shadow: 0px 0px 10px #000; }
+      .experinceSec .education .education-deatils .education-item h3 {
+        font-weight: bold; }
+        .experinceSec .education .education-deatils .education-item h3 a {
+          color: rosybrown; }
+      .experinceSec .education .education-deatils .education-item .eduyear {
+        color: rosybrown;
+        font-weight: bold; }
+  .experinceSec .work {
+    margin-top: 200px; }
+    .experinceSec .work h1 {
+      font-size: 40px;
+      margin-bottom: 60px; }
+    .experinceSec .work .experience-deatils .work-item {
+      height: 200px;
+      border-radius: 10px;
+      background: #413f3f;
+      margin-bottom: 35px;
+      margin-top: 25px;
+      padding: 10px 30px;
+      text-align: center;
+      box-shadow: 0px 0px 10px #000; }
+      .experinceSec .work .experience-deatils .work-item h3 {
+        font-weight: bold;
+        text-align: center; }
+        .experinceSec .work .experience-deatils .work-item h3 a {
+          color: rosybrown; }
+      .experinceSec .work .experience-deatils .work-item .eduyear {
+        text-align: center;
+        color: rosybrown;
+        font-weight: bold; }
+
+/*--------------------  -------------------------------- */
+/*----------------------------------------------------*/
+.portfolioSec {
+  background: #000;
+  padding: 50px 15px;
+  float: left;
+  width: 100%;
+  height: 1500px; }
+  .portfolioSec .container {
+    max-width: 1000px;
+    height: 900px;
+    margin: auto; }
+    .portfolioSec .container .heading {
+      width: 100%;
+      float: left; }
+      .portfolioSec .container .heading h1 {
+        font-size: 35px;
+        color: #fff;
+        margin: 50px 0px 20px;
+        text-align: center;
+        letter-spacing: 0.5px; }
+    .portfolioSec .container .filter-btn {
+      float: left;
+      width: 100%;
+      text-align: center;
+      padding: 30px 0px 20px; }
+      .portfolioSec .container .filter-btn ul {
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+        .portfolioSec .container .filter-btn ul li {
+          display: inline-block;
+          padding: 6px 15px;
+          color: #fff;
+          border-radius: 5px;
+          border: 2px solid rosybrown;
+          margin: 0px 1px;
+          cursor: pointer;
+          font-size: 16px; }
+        .portfolioSec .container .filter-btn ul li.active {
+          background-color: rosybrown; }
+    .portfolioSec .container .items {
+      float: left;
+      width: 100%; }
+      .portfolioSec .container .items .box {
+        float: left;
+        width: 33.33%;
+        padding: 15px;
+        transition: all 1s ease; }
+        .portfolioSec .container .items .box .inner img {
+          width: 100%;
+          display: block; }
+        .portfolioSec .container .items .box .inner div {
+          text-align: center; }
+
+/*--------------------  -------------------------------- */
+/*----------------------------------------------------*/
+/* background image  */
+.footer {
+  background: url(../images/programation.png) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 750px;
+  position: relative;
+  bottom: -1100px;
+  /* To Top Button Styles
+    ===================================*/ }
+  .footer .container {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 3, 3, 0.65);
+    margin: auto; }
+    .footer .container .form-sections {
+      margin: 15rem 10rem 0rem;
+      display: flex;
+      justify-content: space-around; }
+      .footer .container .form-sections .Form-left h1 {
+        color: #fff;
+        padding: 0;
+        margin: 0; }
+      .footer .container .form-sections .Form-left h4 {
+        padding: 0;
+        margin: 0;
+        color: #f3ebeb; }
+      .footer .container .form-sections .Form-left .line {
+        border-bottom: 2px solid rosybrown;
+        width: 8%;
+        margin-left: 0; }
+      .footer .container .form-sections .Form-left span {
+        color: #bbb6b6;
+        font-weight: bold; }
+      .footer .container .form-sections .Form-left hr {
+        width: 25rem;
+        margin-left: 0;
+        margin-bottom: 20px;
+        border: 1px solid rosybrown; }
+      .footer .container .form-sections .Form-right h1 {
+        color: #fff;
+        padding: 0;
+        margin: 0; }
+      .footer .container .form-sections .Form-right form {
+        padding-top: 2rem; }
+        .footer .container .form-sections .Form-right form input {
+          padding: 0.6rem;
+          background: transparent;
+          width: 50rem;
+          height: 5rem;
+          border-radius: 10px;
+          border: 2px solid rosybrown;
+          color: white; }
+        .footer .container .form-sections .Form-right form input::placeholder {
+          color: white; }
+        .footer .container .form-sections .Form-right form textarea {
+          padding: 0.6rem;
+          background: transparent;
+          width: 50rem;
+          border: 2px solid rosybrown;
+          border-radius: 10px;
+          color: white; }
+        .footer .container .form-sections .Form-right form textarea::placeholder {
+          color: white; }
+        .footer .container .form-sections .Form-right form button {
+          width: 50rem;
+          background: rosybrown;
+          padding: 5px;
+          outline: none;
+          border-color: transparent;
+          color: #fff;
+          font-size: 15px;
+          font-weight: bold;
+          letter-spacing: 2px;
+          text-align: center;
+          margin-top: 0.9rem;
+          border-radius: 50px;
+          cursor: pointer; }
+  .footer .top {
+    display: none;
+    background-color: #5C3359;
+    bottom: 2em;
+    color: #FFF;
+    opacity: 0.8;
+    padding: 1.2em;
+    position: fixed;
+    right: 1.5em;
+    text-decoration: none;
+    transition-duration: 1s; }
+  .footer .top:hover {
+    opacity: 1;
+    transition: 1s;
+    text-decoration: none;
+    color: #fff; }
+
+/* media queries */
+@media (max-width: 968px) {
+  .footer {
+    margin-top: 0px;
+    min-height: 1300px; }
+    .footer .container {
+      margin-top: 0px;
+      height: 100%; }
+      .footer .container .form-sections {
+        display: block; }
+        .footer .container .form-sections .Form-left .fa {
+          padding: 8px;
+          font-size: 18px;
+          width: 30px;
+          text-align: center;
+          text-decoration: none;
+          color: #bbb6b6; }
+        .footer .container .form-sections .Form-right {
+          margin-left: -75px;
+          margin-top: 2rem;
+          margin-bottom: 2rem; }
+          .footer .container .form-sections .Form-right form input {
+            padding: 0.5rem;
+            width: 40rem;
+            height: 5rem; }
+          .footer .container .form-sections .Form-right form textarea {
+            width: 40rem; }
+          .footer .container .form-sections .Form-right form button {
+            width: 40rem; } }
 
 /*--------------------  -------------------------------- */

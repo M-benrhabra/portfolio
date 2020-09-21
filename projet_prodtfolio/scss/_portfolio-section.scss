@@ -1,0 +1,68 @@
+
+.portfolioSec{
+  background: $black-color;
+  padding:50px 15px;
+  float: left;
+  width:100%;
+  height: 1500px;
+  .container{
+    max-width: 1000px;
+    height: 900px;
+    margin:auto;
+    .heading{
+      width:100%;
+      float: left;
+      h1{
+        font-size:35px;
+        color:$white-color;
+        margin:50px 0px 20px ;
+        text-align: center;
+        letter-spacing:0.5px;
+      }
+    }
+    .filter-btn{
+      float: left;
+      width:100%;
+      text-align: center;
+      padding:30px 0px 20px;
+      ul{
+        list-style: none;
+        margin:0;
+        padding:0;
+        li{
+          display: inline-block;
+          padding:6px 15px;
+          color:$white-color;
+          border-radius:5px;
+          border: 2px solid $border-color;
+          margin:0px 1px;
+          cursor: pointer;
+          font-size:16px;
+        
+        }
+        li.active{
+          background-color:$border-color;
+        }
+      }
+    }
+    .items{
+      float: left;
+      width:100%;
+      .box{
+        float: left;
+        width:33.33%;
+        padding:15px;
+        transition: all 1s ease;
+        .inner {
+          img{
+            width:100%;
+            display: block;
+          }
+          div{
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,23 +3,31 @@ body {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	line-height: 1.8;
-    background-color: $white-color;
-    
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.header{
+	width: 100vw;
 }
 
 /* Nav / Navbar Styles
 ===================================*/
+
 .navbar {
-	background: $black-color;
+	background: transparent;
 	border-bottom: none;
 	padding: 30px 0 10px;
 	transition-duration: 0.6s;
+	width: 100vw;
 }
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav>li>a {
 	color: $white-color;
 }
-.navbar-default .navbar-nav>li {
+.navbar-nav>li {
 	margin-right: 8px;
 }
 .navbar-default .navbar-nav>li:last-of-type {
@@ -29,15 +37,44 @@ body {
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a:active,
-.navbar-default .navbar-nav>.active>a:focus, {
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus  {
     border-bottom: 4px solid $border-color;
-    color: $border-color;
+	color: $border-color;
+	background: $black-color;
+}
+
+.nav-dropdown-scroll {
+	box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-toggle,
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
-	background: #fff;
+	background: $black-color;
 }
 
+.navbar-scroll {
+	background: $black-color;
+	padding: 0;
+	transition-duration: 0.6s;
+}
+
+
+// Modal login
+.modal{
+	form{
+		div{
+			input{
+				background: transparent;
+				border: 2px solid $border-color;
+				color: $white-color;
+			}
+			input::placeholder{
+				color: $white-color;
+			}
+		}
+	}
+}

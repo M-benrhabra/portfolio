@@ -1,0 +1,64 @@
+.experinceSec{
+    background: $black-color;
+    .education{
+        margin-top: 200px;
+        h1{
+            font-size: 40px;
+            margin-bottom: 60px;
+        }
+        .education-deatils{
+            .education-item{
+                height: 200px;
+                border-radius: 10px;
+                background: $gris-color;
+                margin-bottom: 35px;
+                margin-top: 25px;
+                padding: 10px 30px;
+                text-align: center;
+                box-shadow: 0px 0px 10px $black-color;
+                h3{
+                    font-weight: bold;
+                    a{
+                       color: $border-color;
+                    }
+                }
+                .eduyear{
+                    color: $border-color;
+                    font-weight: bold;
+                }
+            }
+        }
+        
+    }
+    .work{
+        margin-top: 200px;
+    h1{
+        font-size: 40px;
+        margin-bottom: 60px;
+    }
+        .experience-deatils{
+            .work-item{
+                height: 200px;
+                border-radius: 10px;
+                background: $gris-color;
+                margin-bottom: 35px;
+                margin-top: 25px;
+                padding: 10px 30px;
+                text-align: center;
+                box-shadow: 0px 0px 10px $black-color;
+                h3{
+                    font-weight: bold;
+                    text-align: center;
+                    a{
+                       color: $border-color;
+                    }
+                }
+                .eduyear{
+                    text-align: center;
+                    color: $border-color;
+                    font-weight: bold;
+                } 
+            }
+        }
+    }
+}

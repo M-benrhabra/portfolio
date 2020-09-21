@@ -1,154 +1,118 @@
 .skillsSec{
     background: $black-color;
-
-    @mixin border-radius($radius){
-    -webkit-border-radius: $radius;
-        -moz-border-radius: $radius;
-        -ms-border-radius: $radius;
-            border-radius: $radius;
+    h1{
+        margin-top: 200px;
+        margin-bottom: 70px;
     }
-    h3{
-        margin-top: 150px;
-        font-size: 40px;
-
-    }
-
-    .skills-bar-container{
-        margin-top: 50px;
-        margin-left: -30px;
-        width: 100%;
-        min-width: 300px;
-        list-style:none;
-        li{
-           
-            width: 100%;
-            padding: 5px;
-            margin-bottom: 10px;
-            
-            .progressbar-title{
-                color: $white-color;
-                display: flex;
-            
-            h3{
-                display: inline-block;
-            }
-            .percent{
-                position: absolute;
-                right: 5px;
-            }
-            }// end progressbar-title
-            
-            .bar-container{
-            background: #555;
-            position: relative;
-            width: 100%;
-            height: 8px;
-            margin-top: 5px;
-            display: block;
-            @include border-radius(5px);
-            
-            .progressbar{
-                position:absolute;
-                width:0%;
-                height: 100%;
-                @include border-radius(5px);
-
-                -webkit-animation-duration: 2s;
-                animation-duration: 2s;
-                -webkit-animation-timing-function: ease-out;
-                animation-timing-function: ease-out;
-                -webkit-animation-fill-mode: both;
-                animation-fill-mode: both;
-            }
-            #progress-html{
-                -webkit-animation-name: progress-html;
-                animation-name: progress-html;
-                -webkit-animation-delay: $animation-delay;
-                animation-delay: $animation-delay;
-            }
-
-            #progress-css{
-                -webkit-animation-name: progress-css;
-                animation-name: progress-css;
-                -webkit-animation-delay: $animation-delay*2;
-                animation-delay: $animation-delay*2;
-            }
-
-            #progress-javascript{
-                -webkit-animation-name: progress-javascript;
-                animation-name: progress-javascript;
-                -webkit-animation-delay:$animation-delay*3;
-                animation-delay: $animation-delay*3;
-            }
-
-            #progress-php{
-                -webkit-animation-name: progress-php;
-                animation-name: progress-php;
-                -webkit-animation-delay: $animation-delay*4;
-                animation-delay: $animation-delay*4;
-            }
-
-            #progress-mysql{
-                -webkit-animation-name: progress-mysql;
-                animation-name: progress-mysql;
-                -webkit-animation-delay: $animation-delay*5;
-                animation-delay: $animation-delay*5;
-            }
-            #progress-wordpress{
-                -webkit-animation-name: progress-wordpress;
-                animation-name: progress-wordpress;
-                -webkit-animation-delay: $animation-delay*6;
-                animation-delay: $animation-delay*6;
-            }
-            #progress-adobe{
-                -webkit-animation-name: progress-adobe;
-                animation-name: progress-adobe;
-                -webkit-animation-delay: $animation-delay*7;
-                animation-delay: $animation-delay*7;
-            }
-            }// end bar-container
-        }
-    }
-
-    .progress{background-color:$border-color;}
-
-
-    @keyframes progress-html{0%{width: 0%;} 100%{ width: 90%;}}
-    @keyframes progress-css{0%{width: 0%;} 100%{ width: 90%;}}
-    @keyframes progress-javascript{0%{width: 0%;} 100%{ width: 70%;}}
-    @keyframes progress-php{0%{width: 0%;} 100%{ width: 80%;}}
-    @keyframes progress-mysql{0%{width: 0%;} 100%{ width: 65%;}}
-    @keyframes progress-wordpress{0%{width: 0%;} 100%{ width: 80%;}}
-    @keyframes progress-adobe{0%{width: 0%;} 100%{ width: 75%;}}
     
+    .skills .skill {
+        margin-bottom: 30px;
+    }
+
+    .skills .skill .skill-title {
+       color: $white-color;
+       margin-bottom: 10px;
+       font-weight: 400;
+       font-size: 14px;
+    }
+    
+    .skills .skill .skill-bar {
+       width: 0;
+       height: 6px;
+       background: $gris-color;
+       transition: 1s cubic-bezier(1, 0, .5, 1);
+       -webkit-transition: 1s cubic-bezier(1, 0, .5, 1);
+       -ms-transition: 1s cubic-bezier(1, 0, .5, 1);
+    }
+    
+    .skills.active .skill .skill-bar {
+       width: 40%;
+    }
+    
+    .skills .skill .skill-bar span {
+       float: left;
+       width: 0%;
+       background: $border-color;
+       height: 6px;
+       position: relative;
+       transition: 1s cubic-bezier(1, 0, .5, 1);
+       -webkit-transition: 1s cubic-bezier(1, 0, .5, 1);
+       -ms-transition: 1s cubic-bezier(1, 0, .5, 1);
+    }
+    
+    .skills .skill .skill-bar span b {
+       float: left;
+       width: 100%;
+       position: relative;
+       text-align: right;
+       opacity: 0;
+       font-size: 14px;
+       color: $white-color;
+       font-weight: 400;
+       top: -30px;
+    }
+    
+
     .professional-skills{
-       h3{
-           margin-left: 90px;
-       } 
-    }
-    .profess {
-        margin-top: 50px;
-        margin-left: 90px;
-        text-align: center;
-        display: flex;
-        width: 90%;
-        justify-content: space-between;
-        
-      
-      .chart {
-        position: relative;
-        display: block;
-        margin: 20px 10px;
-        color: $white-color;
-        font-size: 16px;
-        font-weight: 400;
-        text-transform: uppercase;
-        text-align: center;
-        
-        canvas {
-          position: absolute;
-          top: 0; left: 0;
+        .skil{
+            margin-bottom: 10px;
         }
-      }
+        .round {
+            min-height: 100px;
+            margin-top: 30px;
+            margin-bottom: 50px ;
+            position: relative;
+            margin-bottom: 20px;
+            
+            strong {
+                position: absolute;
+                top: 50%;
+                left: 28%;
+                margin-top: -50px;
+                transform: translate(-50%);
+                font-size: 20px;
+                color: $white-color;
+                font-weight: 100;
+                
+            }
+            span {
+                display: block;
+                color: rgb(235, 226, 226);
+                font-size: 20px;
+                margin-top: 10px;
+               
+            }
+        }
     }
+    
+       
+      
 }
+
+  /* media queries */
+  @media (max-width: 968px){
+    .skillsSec{
+        .skills-bar-container{
+            margin-left: -15px;
+        }
+        .skills.active .skill .skill-bar {
+            width: 90%;
+         }
+        .professional-skills{
+            h3{
+                margin-left: 5px;
+            }
+            .display{
+                display: flex;
+            }
+            .round {
+                margin-left: 30px;
+                strong{
+                    left: 50%; 
+                }
+            }
+        }
+            
+
+    }
+  }

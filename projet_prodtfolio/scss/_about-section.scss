@@ -49,3 +49,22 @@
        }
     }
 }
+
+  /* media queries */
+  @media (max-width: 968px){
+    .aboutSec{
+        .section-separator{
+            display: block;
+            .aboutsec-info{
+                margin-top: 50px;
+                margin-left: 10px;
+                p{
+                    width: 480px;
+                }
+                .about-tag{
+                    width: 450px;
+                }
+            }
+        }
+    }
+  }
